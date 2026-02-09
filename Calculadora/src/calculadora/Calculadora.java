@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Calculadora {
 	private static LeerInt lectorInteger = new LeerInt();
 	private int pilaNumeros;
-	private int resultadoAnterior;
 	private ArrayList<Integer>resultados = new ArrayList<>();
 	public void sumar(int numerosASumar) {
 		for(int i=0;i<numerosASumar;i++) {
@@ -51,8 +50,12 @@ public class Calculadora {
 		resultados.add(pilaNumeros);
 		pilaNumeros = 0;
 	}
-	public int getResultadoAnterior() {
-		resultadoAnterior = resultados.get(resultados.size()-1);
+	public int resultadoAnterior() {
+		int resultadoAnterior = resultados.get(resultados.size()-2);
+		return resultadoAnterior;
+	}
+	public int ultimoResultado() {
+		int resultadoAnterior = resultados.get(resultados.size()-2);
 		return resultadoAnterior;
 	}
 	

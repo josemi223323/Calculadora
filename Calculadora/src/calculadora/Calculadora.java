@@ -58,6 +58,10 @@ public class Calculadora {
 		int resultadoAnterior = resultados.get(resultados.size()-2);
 		return resultadoAnterior;
 	}
-	
+	public void verTodosLosCalculos() {
+		for(Integer calculos : resultados) {
+			System.out.println(calculos + "\t");
+		}
+	}
 	
 }

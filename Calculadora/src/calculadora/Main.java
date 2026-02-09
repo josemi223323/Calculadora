@@ -12,12 +12,24 @@ public class Main {
 			switch(opcion) {
 				case 1:
 					elegirCalculo(calculadora);
+					break;
 				case 2:
 					ultimoResultado(calculadora);
+					break;
 				case 3:
 					resultadoAnterior(calculadora);
+					break;
+				case 4:
+					verTodoslosCalculos(calculadora);
+				case 5:
+					seguir = false;
+					System.out.println("adios");
 			}
 		}
+	}
+	private static void verTodoslosCalculos(Calculadora calculadora) {
+		calculadora.verTodosLosCalculos();
+		
 	}
 	private static void resultadoAnterior(Calculadora calculadora) {
 		System.out.println("el resultado anterior es " + calculadora.resultadoAnterior());

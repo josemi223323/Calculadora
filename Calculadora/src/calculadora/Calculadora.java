@@ -66,5 +66,12 @@ public class Calculadora {
 			System.out.println(calculos + "\t");
 		}
 	}
+	public Boolean borrarHistorial() {
+		if(resultados.isEmpty()) {
+	        return false;
+	    }
+	    resultados.clear();
+	    return true;
+	}
 	
 }

@@ -23,10 +23,21 @@ public class Main {
 					verTodoslosCalculos(calculadora);
 					break;
 				case 5:
+					borrarHistorial(calculadora);
+					break;
+				case 6:
 					seguir = false;
 					System.out.println("adios");
 			}
 		}
+	}
+	private static void borrarHistorial(Calculadora calculadora) {
+		if(calculadora.borrarHistorial()) {
+			System.out.println("historial borrado con exito");
+		}else {
+			System.out.println("el historial esta vacio");
+		}
+		
 	}
 	private static void verTodoslosCalculos(Calculadora calculadora) {
 		calculadora.verTodosLosCalculos();
@@ -42,18 +53,27 @@ public class Main {
 	}
 	private static void elegirCalculo(Calculadora calculadora) {
 		String opcion = lectorString.lector("introduce que quieres hacer sumar/restar/dividir/multiplicar");
-		if(opcion.equalsIgnoreCase("sumar")) {
-			int numVeces = lectorInteger.lector("cuantas veces quieres sumar?",true);
-			calculadora.sumar(numVeces);
-		}else if(opcion.equalsIgnoreCase("restar")) {
-			int numVeces = lectorInteger.lector("cuantas veces quieres restar?",true);
-			calculadora.restar(numVeces);
-		}else if(opcion.equalsIgnoreCase("multiplicar")) {
-			int numVeces = lectorInteger.lector("cuantas veces quieres multiplicar?",true);
-			calculadora.multiplicar(numVeces);
-		}else if(opcion.equalsIgnoreCase("dividir")) {
-			int numVeces = lectorInteger.lector("cuantas veces quieres dividir?",true);
-			calculadora.dividir(numVeces);
+		int numVeces;
+		switch(opcion.toLowerCase()) {
+			case "sumar":
+				numVeces = lectorInteger.lector("introduce la cantidad de numeros que quieres sumar",true);
+				calculadora.sumar(numVeces);
+				break;
+			case "restar":
+				numVeces = lectorInteger.lector("introduce la cantidad de numeros que quieres restar",true);
+				calculadora.restar(numVeces);
+				break;
+			case "multiplicar":
+				numVeces = lectorInteger.lector("introduce la cantidad de numeros que quieres multiplicar",true);
+				calculadora.multiplicar(numVeces);	
+				break;
+			case "dividir":
+				numVeces = lectorInteger.lector("introduce la cantidad de numeros que quieres restar",true);
+				calculadora.dividir(numVeces);
+				break;
+			default:
+				System.out.println("introduce uno correcto");
+			
 		}
 		
 	}

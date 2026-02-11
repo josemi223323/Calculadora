@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class LeerString {
+public class LecturaStrings {
 	static BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
 
 	public String lector(String frase) {

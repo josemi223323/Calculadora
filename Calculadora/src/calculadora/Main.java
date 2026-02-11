@@ -1,8 +1,8 @@
 package calculadora;
 
 public class Main {
-	private static LeerInt lectorInteger = new LeerInt();
-	private static LeerString lectorString = new LeerString();
+	private static LecturaEnteros lectorInteger = new LecturaEnteros();
+	private static LecturaStrings lectorString = new LecturaStrings();
 	public static void main(String[] args) {
 		Boolean seguir = true;
 		Calculadora calculadora = new Calculadora();
@@ -21,6 +21,7 @@ public class Main {
 					break;
 				case 4:
 					verTodoslosCalculos(calculadora);
+					break;
 				case 5:
 					seguir = false;
 					System.out.println("adios");

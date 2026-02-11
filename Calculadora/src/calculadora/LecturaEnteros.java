@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class LeerInt {
+public class LecturaEnteros {
 	static BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
 
 	public int lector(String frase) {

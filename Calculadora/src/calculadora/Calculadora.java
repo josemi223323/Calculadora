@@ -73,5 +73,12 @@ public class Calculadora {
 	    resultados.clear();
 	    return true;
 	}
+	public Boolean borrarUltimoNumero() {
+		if(!resultados.isEmpty()) {
+			resultados.remove(resultados.size()-1);
+			return true;
+		}
+		return false;
+	}
 	
 }

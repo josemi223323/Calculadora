@@ -26,9 +26,19 @@ public class Main {
 					borrarHistorial(calculadora);
 					break;
 				case 6:
+					borrarUltimoNumero(calculadora);
+					break;
+				case 7:
 					seguir = false;
 					System.out.println("adios");
 			}
+		}
+	}
+	private static void borrarUltimoNumero(Calculadora calculadora) {
+		if(calculadora.borrarUltimoNumero()) {
+			System.out.println("eliminado con exito");
+		}else {
+			System.out.println("la lista esta vacia");
 		}
 	}
 	private static void borrarHistorial(Calculadora calculadora) {

@@ -1,11 +1,13 @@
 package calculadora;
 
+import java.util.OptionalInt;
+
 public class Main {
 	private static LecturaEnteros lectorInteger = new LecturaEnteros();
 	private static LecturaStrings lectorString = new LecturaStrings();
 	public static void main(String[] args) {
 		Boolean seguir = true;
-		Calculadora calculadora = new Calculadora();
+		Calculadora calculadora = new Calculadora(); // un Ejemplo de nombre de variable que revela intenciones 
 		while(seguir) {
 			System.out.println("introduce una opcion: 1: calcular,2:conseguir el ultimo resultado,3:conseguir el resultado anterior,4 mostrar todos los resultados,5 salir");
 			int opcion = lectorInteger.lector("",true);
@@ -54,11 +56,21 @@ public class Main {
 		
 	}
 	private static void resultadoAnterior(Calculadora calculadora) {
-		System.out.println("el resultado anterior es " + calculadora.resultadoAnterior());
+		OptionalInt resultadoAnterior = calculadora.ultimoResultado();
+		if(resultadoAnterior.isEmpty()) {
+			System.out.println("la lista esta vacia");
+		}else {
+			System.out.println("el ultimo resultado es " + resultadoAnterior.getAsInt());
+		}
 		
 	}
 	private static void ultimoResultado(Calculadora calculadora) {
-		System.out.println("el ultimo resultado es " + calculadora.ultimoResultado());
+		OptionalInt ultimoResultado = calculadora.ultimoResultado();
+		if(ultimoResultado.isEmpty()) {
+			System.out.println("la lista esta vacia");
+		}else {
+			System.out.println("el ultimo resultado es " + ultimoResultado.getAsInt());
+		}
 		
 	}
 	private static void elegirCalculo(Calculadora calculadora) {

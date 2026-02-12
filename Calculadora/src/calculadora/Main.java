@@ -90,7 +90,7 @@ public class Main {
 				calculadora.multiplicar(numVeces);	
 				break;
 			case "dividir":
-				numVeces = lectorInteger.lector("introduce la cantidad de numeros que quieres restar",true);
+				numVeces = lectorInteger.lector("introduce la cantidad de numeros que quieres dividir",true);
 				calculadora.dividir(numVeces);
 				break;
 			default:

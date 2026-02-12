@@ -46,9 +46,9 @@ public class Calculadora {
 	public void dividir(int numerosADividir) {
 		for(int i=0;i<numerosADividir;i++) {
 			if(i==0) {
-				acumulador = lectorInteger.lector("introduce un numero a multiplicar",true);
+				acumulador = lectorInteger.lector("introduce un numero a dividir",true);
 			}else {
-				acumulador /= lectorInteger.lector("introduce un numero a multiplicar",true);
+				acumulador /= lectorInteger.lector("introduce un numero a dividir",true);
 			}
 		}
 		System.out.println("el resultado es " + acumulador);

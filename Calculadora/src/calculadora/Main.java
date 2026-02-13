@@ -56,11 +56,11 @@ public class Main {
 		
 	}
 	private static void resultadoAnterior(Calculadora calculadora) {
-		OptionalInt resultadoAnterior = calculadora.ultimoResultado();
+		OptionalInt resultadoAnterior = calculadora.resultadoAnterior();
 		if(resultadoAnterior.isEmpty()) {
 			System.out.println("la lista esta vacia");
 		}else {
-			System.out.println("el ultimo resultado es " + resultadoAnterior.getAsInt());
+			System.out.println("el resultado anterior es " + resultadoAnterior.getAsInt());
 		}
 		
 	}

@@ -60,7 +60,7 @@ public class Calculadora {
 		if(resultados.isEmpty()) {
 			return OptionalInt.empty();
 		}else {
-			int resultadoAnterior = resultados.get(resultados.size()-1);
+			int resultadoAnterior = resultados.get(resultados.size()-2);
 			return OptionalInt.of(resultadoAnterior);
 		}
 	}

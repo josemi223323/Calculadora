@@ -58,7 +58,7 @@ public class Main {
 	private static void resultadoAnterior(Calculadora calculadora) {
 		OptionalInt resultadoAnterior = calculadora.resultadoAnterior();
 		if(resultadoAnterior.isEmpty()) {
-			System.out.println("la lista esta vacia");
+			System.out.println("la lista esta vacia o solo tienes un calculo hecho");
 		}else {
 			System.out.println("el resultado anterior es " + resultadoAnterior.getAsInt());
 		}

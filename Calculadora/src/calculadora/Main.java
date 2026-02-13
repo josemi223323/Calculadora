@@ -9,7 +9,7 @@ public class Main {
 		Boolean seguir = true;
 		Calculadora calculadora = new Calculadora(); // un Ejemplo de nombre de variable que revela intenciones 
 		while(seguir) {
-			System.out.println("introduce una opcion: 1: calcular,2:conseguir el ultimo resultado,3:conseguir el resultado anterior,4 mostrar todos los resultados,5 salir");
+			System.out.println("introduce una opcion: 1: calcular,2:conseguir el ultimo resultado,3:conseguir el resultado anterior,4 mostrar todos los resultados,5 borrar hisotiral completo,6 borrar ultimo numero del historial,7 salir");
 			int opcion = lectorInteger.lector("",true);
 			switch(opcion) {
 				case 1:

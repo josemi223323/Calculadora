@@ -6,7 +6,6 @@ package calculadora;
 import java.util.ArrayList;
 import java.util.OptionalInt;
 public class Calculadora {
-	private static final OptionalInt OptinalInt = null;
 	private static LecturaEnteros lectorInteger = new LecturaEnteros();
 	private int acumulador;
 	private ArrayList<Integer>resultados = new ArrayList<>();// por ejemplo resultados es un nombre de variable buscable
@@ -62,10 +61,11 @@ public class Calculadora {
 			return OptionalInt.empty();
 		}else {
 			try {
-				int resultadoAnterior = resultados.get(resultados.size()-2);
+				int numResultadoAnterior = 2;
+				int resultadoAnterior = resultados.get(resultados.size()-numResultadoAnterior);
 				return OptionalInt.of(resultadoAnterior);
 			}catch(IndexOutOfBoundsException e) {
-				return OptinalInt.empty();
+				return OptionalInt.empty();
 			}
 		}
 	}
@@ -73,7 +73,8 @@ public class Calculadora {
 		if(resultados.isEmpty()) {
 			return OptionalInt.empty();
 		}else {
-			int resultadoAnterior = resultados.get(resultados.size()-1);
+			int numResultadoAnterior = 1;
+			int resultadoAnterior = resultados.get(resultados.size()-numResultadoAnterior);
 			return OptionalInt.of(resultadoAnterior);
 		}
 	}
